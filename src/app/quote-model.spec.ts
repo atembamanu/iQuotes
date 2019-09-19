@@ -1,7 +1,7 @@
-import { QuoteModel } from './quote-model';
+import { Quote } from './quote';
 
 describe('QuoteModel', () => {
   it('should create an instance', () => {
-    expect(new QuoteModel()).toBeTruthy();
+    expect(new Quote(1, 'Angular', 'Atemba', 'John Doe')).toBeTruthy();
   });
 });

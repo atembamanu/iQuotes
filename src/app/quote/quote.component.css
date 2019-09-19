@@ -1,0 +1,20 @@
+.card
+{
+  margin: 20px;
+  padding: 20px;
+  /* background-color: antiquewhite */
+
+}
+.mAuthor{
+  color: #f9c128;
+  font-size: 24px;
+  float: right;
+}
+.fa-2x{
+  padding: 10px
+}
+#timeSinceCreated
+{
+  color: #4caaf5;
+
+}
