@@ -8,12 +8,11 @@
           <div>Submitted By: {{ iquote.user}} <span id="timeSinceCreated"> 30 Seconds ago</span></div>
         </div>
         <div class="col-md-4">
-          <!-- <span id="upvote">&#128077;</span>
-          <span id="downvote">&#128079;</span> -->
           <span>
             <i title="I like this" ng-click="changeVote(vote, 'up')" class="fa fa-arrow-circle-up fa-2x" ng-class="{true:'up', false:''}[vote=='up']"> </i><span id="vcount">0</span>
             <i title="I dislike this" ng-click="changeVote(vote, 'down')" class="fa fa-arrow-circle-down fa-2x"  ng-class="{true:'down', false:''}[vote=='down']"></i><span id="vcount">0</span>
           </span>
+          <span id=iEdit><i class="fa fa-info fa-1x" aria-hidden="true"></i></span>
         </div>
       </div>
     </div>

@@ -1,0 +1,47 @@
+<div id="header">
+    <h2>{{title}}
+    <span style='font-size:80px;'>&#9997;</span>
+    </h2>
+    <button class="btn btn-primary" id="iCreate" (click)="open(content)">CREATE IQUOTE</button>
+    <p>Read or create your own quotes</p>
+    <ng-template #content let-modal>
+    <br><br>
+    <div class="modal-header">
+      <h2 class="modal-title" id="modal-basic-title">Create your Quote
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true" id="closeModal">&times;</span>
+      </button>
+      </h2>
+    </div>
+    <div class="modal-body">
+      <form>
+         <div class="row">
+           <div class="col-md-6">
+              <div class="form-group">
+                  <label for="userName">Your Name</label>
+                  <input type="text" required class="form-control" id="userName">
+              </div>
+           </div>
+           <div class="col-md-6">
+              <div class="form-group">
+                  <label for="author">Author</label>
+                  <input type="text" required class="form-control" id="author">
+              </div>
+           </div>
+         </div>
+          <div class="form-group">
+              <label for="quote">Quote</label>
+              <textarea class="form-control" id="quote" rows="3" required></textarea>
+          </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btnIsave btn-lg" (click)="modal.close('Save click')">Save Quote</button>
+    </div>
+    </ng-template>
+
+
+    </div>
+    <div class='well hoverwell thumbnail'>
+    <app-quote></app-quote>
+    </div>

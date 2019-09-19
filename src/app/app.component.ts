@@ -1,22 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-root',
-  template: `
-    <h2>{{title}}
-    <span style='font-size:80px;'>&#9997;</span>
-    </h2>
-    <button class="btn btn-large btn-primary" id="iCreate">CREATE IQUOTE</button>
-    <p>Read or create your own quotes</p>
-    <div class='well hoverwell thumbnail'>
-      <app-quote></app-quote>
-    </div>
-
-  `,
+  templateUrl: './app.component.html',
   styles: [`
+  #header{margin-bottom  : 40px}
   #iCreate{ float:right; font-size: 20px;}
+  span#closeModal{font-size: 24px;}
+  .btnIsave{background-color: #f9c128}
   `]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'iQuote';
+
+  constructor(private modalService: NgbModal) {}
+
+  closeResult: string;
+
+  ngOnInit(): void {}
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'});
+  }
+
 }
