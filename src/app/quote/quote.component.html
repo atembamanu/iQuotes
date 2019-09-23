@@ -28,16 +28,16 @@
   </div>
 </div>
 <div *ngFor='let iquote of iquotes; let iquoteIndex = index'>
-    <div class="well">
+  <div class="well">
     <div id="{{iquoteIndex}}"><em> {{iquote.quote}}</em></div>
     <div class='mAuthor'>~ {{ iquote.author }}</div>
-      <hr>
-      <div class="row">
-        <div class="col-md-8">
+    <hr>
+    <div class="row">
+      <div class="col-md-8">
         <div>Submitted By: {{ iquote.user}} <span id="timeSinceCreated">{{ iquote.createdAt | dateCounter }} days
             ago</span></div>
-        </div>
-        <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
         <div id="vote">
           <i title="I like this" (click)="upVote(iquote)" class="fa fa-arrow-circle-up fa-2x"></i><span
             id="vcount">{{ iquote.upvotes }}</span>
@@ -46,7 +46,7 @@
           <span id=iEdit (click)='deleteQuote($event,iquoteIndex)'><i class="fa fa-trash" aria-hidden="true"></i></span>
         </div>
       </div>
-        </div>
-      </div>
     </div>
-  <div>
+  </div>
+</div>
+<div>
