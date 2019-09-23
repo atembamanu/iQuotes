@@ -10,11 +10,8 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
 
-  iquotes: Quote[] = [
-    // tslint:disable-next-line: max-line-length
-    new Quote (1, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At nesciunt est vero placeat consequatur nulla facilis ea modi nobis repudiandae illo quae praesentium officiis reiciendis nostrum soluta, consequuntur, molestias eius', 'Atemba', 'John Doe' ),
-    // tslint:disable-next-line: max-line-length
-    new Quote (1, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At nesciunt est vero placeat consequatur nulla facilis ea modi nobis repudiandae illo quae praesentium officiis reiciendis nostrum soluta, consequuntur, molestias eius', 'Atemba', 'John Doe' ),
+  upvotes = 0 ;
+  downvotes = 0;
 
   iquotes: Quote[] = [
     new Quote(1, 'Have no fear of perfection, you will never reach it', 'Salvador Dali', 'Navido Chief', new Date(2019, 7, 22), 0, 0),
@@ -22,6 +19,14 @@ export class QuoteComponent implements OnInit {
     new Quote(3, 'You miss 100% of the shots you do not take', 'Lee Harvey', 'Khakai Salim', new Date(2019, 5, 20), 0, 0)
   ];
 
+  mostVotes = 0;
+  bestAuthor: string;
+  bestQuote: string;
+  bestUser: string;
+  lowVotes: number;
+  dateCreated: any;
+  isComplete = true;
+  constructor() {  }
   ngOnInit() {
   }
 
