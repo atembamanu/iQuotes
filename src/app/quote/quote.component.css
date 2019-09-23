@@ -9,6 +9,7 @@
   color: #f9c128;
   font-size: 24px;
   float: right;
+  font-weight: bold;
 }
 .fa-2x{
   padding: 10px
@@ -21,5 +22,49 @@
 #iEdit
 {
   float: right;
-  color: #4caaf5;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: red;
+}
+#status{
+  color: #f9c128;
+  font-weight: bold;
+  font-size: 26px;
+  padding: 30px;
+}
+.fa-arrow-circle-up, .fa-arrow-circle-down, .fa-trash{
+ cursor:pointer;
+}
+.fa-arrow-circle-up:hover
+{
+color: #4caaf5;
+}
+.fa-arrow-circle-down:hover
+{
+color: red;
+}
+.badge{
+font-size: 21px;
+background-color: #4caaf5;
+cursor:pointer;
+}
+#theauthor
+{
+  color: white;
+}
+.badge-light
+{
+  background-color: gray;
+}
+.ivote
+{
+  float: right;
+  color: white;
+  font-weight: bold;
+
+}
+#lowvotes{
+  background-color: red;
+  color: white
 }
