@@ -34,4 +34,12 @@ export class QuoteComponent implements OnInit {
     iquote.date = new Date(iquote.date);
     this.iquotes.push(iquote);
   }
+
+  upVote(iquote) {
+    iquote.upvotes = iquote.upvotes + 1;
+  }
+  downVote(iquote) {
+    iquote.downvotes = iquote.downvotes + 1;
+
+  }
 }
