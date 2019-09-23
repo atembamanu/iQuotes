@@ -25,4 +25,13 @@ export class QuoteComponent implements OnInit {
   ngOnInit() {
   }
 
+  addNewQuote(iquote) {
+    const quoteLength = this.iquotes.length;
+    iquote.id = quoteLength + 1;
+    iquote.quote = iquote.quote;
+    iquote.author = iquote.author;
+    iquote.user = iquote.user;
+    iquote.date = new Date(iquote.date);
+    this.iquotes.push(iquote);
+  }
 }
