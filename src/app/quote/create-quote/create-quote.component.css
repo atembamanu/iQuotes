@@ -1,0 +1,5 @@
+#iCreate{ float:right; font-size: 20px; background-color: #4caaf5; color: white}
+#iCreate:hover{ background-color: #f9c128; color: black}
+span#closeModal{font-size: 24px;}
+.btnIsave{background-color: #f9c128}
+form#makequote input, textarea{font-size: 18px; color: black}
