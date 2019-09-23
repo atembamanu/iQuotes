@@ -1,5 +1,6 @@
 # Iquote
 
+![Iquotes live Image](src/assets/images/iquotes.png?raw=true "")
 
 ## Description
 This application allows users to read throught the provided quotes, upvote them if they are inspirational or downvote them if they are terrible. They also create their own quotes and delete quotes if they deem not necessary.
