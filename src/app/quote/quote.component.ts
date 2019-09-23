@@ -42,4 +42,20 @@ export class QuoteComponent implements OnInit {
     iquote.downvotes = iquote.downvotes + 1;
 
   }
+  // use a badge to show the best quote
+
+  bestQuotechecker() {
+    this.mostVotes = 0;
+    // tslint:disable-next-line: prefer-for-of
+    for ( let i = 0; i < this.iquotes.length; i++) {
+      if (this.iquotes[i].upvotes > this.mostVotes) {
+        this.mostVotes = this.iquotes[i].upvotes;
+        this.bestAuthor = this.iquotes[i].author;
+        this.bestQuote = this.iquotes[i].quote;
+        this.bestUser = this.iquotes[i].user;
+        this.lowVotes = this.iquotes[i].downvotes;
+        this.dateCreated = this.iquotes[i].createdAt;
+      }
+    }
+  }
 }
