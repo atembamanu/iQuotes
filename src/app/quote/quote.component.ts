@@ -58,4 +58,16 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+
+  deleteQuote(isComplete, index) {
+    if (isComplete) {
+      const toDelete = confirm(`Are you sure you want to delete ${this.iquotes[index].quote} By ${this.iquotes[index].author}.
+      ${this.iquotes[index].upvotes} People liked this quote!  `);
+
+      if (toDelete) {
+        this.iquotes.splice(index, 1);
+      }
+    }
+  }
+
 }
