@@ -1,4 +1,33 @@
-<div *ngFor='let iquote of iquotes'>
+<div id="status">
+  <span *ngIf='iquotes.length > 0'>Enjoy Reading or reveal the <span class="badge" (click)="bestQuotechecker()">Best
+      Quote</span></span>
+  <span *ngIf='iquotes.length === 0'>Quotes Deck is Empty, Please Create Quotes or Reload page to get my
+    favourites</span>
+  <app-create-quote (addQuote)="addNewQuote($event)"></app-create-quote>
+</div>
+<div *ngIf='bestQuote && iquotes.length > 0'>
+  <div class="well" appHighlightBestQuote>
+    <div><em> {{bestQuote}}</em></div>
+    <div id="theauthor">~ {{ bestAuthor }}</div>
+    <div class="row">
+      <div class="col-md-8">
+        <div>Submitted By: {{bestUser}} <span id="timeSinceCreated">{{ dateCreated | dateCounter }} days ago</span>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="ivote">
+          <span >
+            Upvotes <span class="badge  badge-info" id="mostvotes">{{ mostVotes }}</span>
+          </span>
+          <span>
+            Downvotes <span class="badge badge-danger" id="lowvotes">{{ lowVotes }}</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngFor='let iquote of iquotes; let iquoteIndex = index'>
     <div class="well">
       <div>{{ iquote.quote }}</div>
       <div class='mAuthor'>~ <i>{{ iquote.author }}</i></div>
